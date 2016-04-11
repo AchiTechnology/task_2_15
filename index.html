@@ -39,6 +39,7 @@
 				function getData(){
 					/*coding here
 					 */
+					var oUl=document.getElementById('source');
 					
 					/*
 					 data=[
@@ -46,6 +47,12 @@
 					 	["北京",90]
 					 ]
 					 * */
+					var data=[];
+					for(var i=0;i<oUl.length;i++){
+							var li=oul.children[i];
+							var str
+					}
+					
 					
 					return data;
 					
@@ -58,7 +65,11 @@
 				 * */
 				
 				function sortAqiData(data){
+					data.sort(function(a,b){
+						return a[1]-b[1];
+					})
 					
+					return data;
 				}
 				
 				/*
