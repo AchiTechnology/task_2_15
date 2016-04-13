@@ -40,8 +40,8 @@
 				function getData(){
 					/*coding here
 					 */
-					var oUl=document.getElementById('source');
-					var oLi=oUl.getElementsByTagName('li');
+					var oUl=document.getElementById("source");
+					var oLi=oUl.getElementsByTagName("li");
 				
 					
 					/*
@@ -52,16 +52,13 @@
 					 * */
 					var data=[];
 					for(var i=0;i<oLi.length;i++){
-							data[data.length]=oLi[i].innerText.split('：')
+							data[data.length]=oLi[i].innerText.split("：")
 					};
 					
 					return data;
 					
-				
 					
-				
-					
-				};
+				}
 				
 				/*
 				 sortAqiData
@@ -84,10 +81,10 @@
 				 * */
 				
 				function render(data){
-					var resort=document.getElementById('resort');
+					var oUl_rs=document.getElementById("resort");
 					
-					for(var j=0;j<data.length;j++ ){
-						resort.innerHTML+='<li>第'+(j+1)+'名：'+data[j][0]+'：'+'<b>'+data[j][1]+'</b></li>'
+					for(var j=0;j<data.length;j++){
+						oUl_rs.innerHTML+='<li>第'+(j+1)+'名：'+data[j][0]+'：'+'<b>'+data[j][1]+'</b></li>'
 						
 					};
 					
@@ -97,16 +94,17 @@
 					var aqiData = getData();
   				aqiData = sortAqiData(aqiData);
   				render(aqiData);
-				};
+				}
 				
 				function init(){
 					//在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle 函数
-					document.getElementById('sort-btn').onclick=btnHandle();
+					document.getElementById("sort-btn").onclick=btnHandle;
 					
 
 				}
 				
 				init();
+				
 			</script>
 
 
