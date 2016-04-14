@@ -98,7 +98,15 @@
 				
 				function init(){
 					//在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle 函数
-					document.getElementById("sort-btn").onclick=btnHandle;
+					var srtbtn=document.getElementById("sort-btn");
+					var on=1;			//添加一个数增加判断onclick事件是否已执行   1执行，0未执行
+					srtbtn.onclick=function(){
+						if(on){
+							btnHandle();
+							on=0;
+						}
+					}
+					
 					
 
 				}
